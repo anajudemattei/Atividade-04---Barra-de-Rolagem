@@ -3,18 +3,18 @@ import { ScrollView, FlatList, SafeAreaView, View, Text, StyleSheet } from "reac
 
 export default function App() {
   const data = [
-    { id: "1", title: "Bolinha 1" },
-    { id: "2", title: "Bolinha 2" },
-    { id: "3", title: "Bolinha 3" },
-    { id: "4", title: "Bolinha 4" },
-    { id: "5", title: "Bolinha 5" },
-    { id: "6", title: "Bolinha 6" },
-    { id: "7", title: "Bolinha 7" },
-    { id: "8", title: "Bolinha 8" },
-    { id: "9", title: "Bolinha 9" },
-    { id: "10", title: "Bolinha 10" },
-    { id: "11", title: "Bolinha 11" },
-    { id: "12", title: "Bolinha 12" },
+    { id: "1", title: "Morango" },
+    { id: "2", title: "Manga" },
+    { id: "3", title: "Uva Verde" },
+    { id: "4", title: "Banana" },
+    { id: "5", title: "Água com gás" },
+    { id: "6", title: "Arroz" },
+    { id: "7", title: "Peixe" },
+    { id: "8", title: "Chocolate" },
+    { id: "9", title: "Macarrão" },
+    { id: "10", title: "Melancia" },
+    { id: "11", title: "Tomate" },
+    { id: "12", title: "Beterraba" },
   ];
 
   const renderItem = ({ item }) => (
@@ -25,6 +25,7 @@ export default function App() {
 
   return (
     <SafeAreaView>
+        <Text style={styles.title}>Lista de Compras🛍</Text>
       <ScrollView>
         {data.map((item) => (
           <View key={item.id} style={styles.item}>
@@ -46,9 +47,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: 20,
+    justifyContent: "center",
+    alignItems: "center",
   },
   item: {
-    backgroundColor: "lightblue",
+    backgroundColor: "#f08080",
     padding: 20,
     marginVertical: 8,
     marginHorizontal: 16,
@@ -56,5 +59,6 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 16,
+    textAlign: "center",
   },
 });
